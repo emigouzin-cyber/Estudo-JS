@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verificador de Idade</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+    }
+
+    .container{
+      width: 350px;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1{
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label{
+      text-align: left;
+      font-weight: bold;
+      color: #334155;
+    }
+
+    input{
+      padding: 12px;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    input:focus{
+      border-color: #2563eb;
+    }
+
+    button{
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover{
+      background: #1d4ed8;
+      transform: scale(1.03);
+    }
+
+    #resultado{
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Verificador de Idade</h1>
+
+    <div class="input-box">
+      <label for="ano">Digite seu ano de nascimento:</label>
+
+      <input 
+        type="number" 
+        id="ano" 
+        placeholder="Ex: 2005"
+      >
+
+      <button id="verificar">
+        Verificar
+      </button>
+    </div>
+
+    <div id="resultado">
+      <!-- Resultado aqui -->
+    </div>
+  </div>
+
+  <script>
+    const botao = document.getElementById('verificar');
+
+    botao.addEventListener("click", function () {
+        const idade = document.getElementById('ano').value;
+         const resultado = (document.getElementById('resultado'));
+        if (idade >= 2008) {
+           
+            resultado.innerHTML = 'Acesso Negado';
+        } else {
+
+            resultado.innerHTML = 'Acesso Liberado';
+        }
+    })
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+</body>
+</html>
